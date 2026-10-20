@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局背景纹理 — 原型设计契约中的"氛围层" */
+html, body { height: 100%; }
+body {
+  background-color: theme('colors.surface.bg');
+  background-image:
+    linear-gradient(rgba(28,35,51,.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28,35,51,.028) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: theme('colors.ink.DEFAULT');
+  font-family: theme('fontFamily.sans');
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 自定义工具类 */
+@layer utilities {
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(28,35,51,.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(28,35,51,.028) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .reveal-r1 { animation: fadeIn 300ms ease-out both; animation-delay: 40ms; }
+  .reveal-r2 { animation: fadeIn 300ms ease-out both; animation-delay: 80ms; }
+  .reveal-r3 { animation: fadeIn 300ms ease-out both; animation-delay: 120ms; }
+  .reveal-r4 { animation: fadeIn 300ms ease-out both; animation-delay: 160ms; }
+  .reveal-r5 { animation: fadeIn 300ms ease-out both; animation-delay: 200ms; }
+  .reveal-r6 { animation: fadeIn 300ms ease-out both; animation-delay: 240ms; }
+}
+
+/* Lucide 图标统一 stroke-width（跟随设计契约 1.75） */
+.lucide, svg[data-lucide] { stroke-width: 1.75; }
+
+/* 滚动条 polish */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #DDE0E8; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #C7CCD8; }
