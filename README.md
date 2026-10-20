@@ -1,4 +1,4 @@
-# ContentFlow · AI 内容批量生产 MVP
+# ContentFlow ·  内容批量生产 MVP
 
 > 给线下商家 / 中小品牌做 AI 社交内容量产的工作台。
 > 人设档案 → 批量生成 → 审阅通过 → 扣费对账，一条链路闭环。
@@ -87,4 +87,4 @@ src/
 
 ## License
 
-TBD
+lzc
